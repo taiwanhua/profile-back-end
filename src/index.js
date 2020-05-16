@@ -16,7 +16,7 @@ const server = new GraphQLServer(
 )
 
 server.start({
-    port: 4600 //schema.graphql的 port，預設4000
+    //port: 4600 //schema.graphql的 port，預設4000
 }, ({ port }) => {
     console.log(`啟動在 ${port}`);
     console.log("PRISMA", process.env.PRISMA_ENDPOINT)
