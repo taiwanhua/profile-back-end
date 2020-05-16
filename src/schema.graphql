@@ -1,0 +1,41 @@
+type Query{
+    # API
+    users(first:Int): [User!]!
+
+    user(id:ID , name:String):User
+}
+
+type Mutation{
+
+    createUseraaa(name:String!,password:String!,email:String,phone:String):User
+
+    # createCategory(
+    #     authorId: ID! ,
+    #     name: String!
+    # ):Category
+
+    # createPost(
+    #     authorId: ID!,
+    #     title: String!,
+    #     content: String!,
+    #     categoryIds: [String!]!
+    # ):Post
+
+    # updateCategory(
+    #     id: ID!,
+    #     name: String!,
+    #     authorId: ID
+    # ):Category
+
+    # deleteCategory( id: ID!):Category
+}
+
+type Subscription{
+    #訂閱
+    userSubscription: User
+}
+
+type User {
+  id: ID!
+  name: String!
+}
